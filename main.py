@@ -59,6 +59,15 @@ def writeText(text):
 groupList = load_groups()
 
 for groupId in groupList:
+    try:
+        main(groupId)
+    except:
+        print('cos poszlo nie tak')
+
+
+
+
+def main(groupId):
     print(groupId)
     goToGroupWebSide(groupId)
     fakeClick()
